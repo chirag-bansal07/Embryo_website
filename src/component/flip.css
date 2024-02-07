@@ -1,0 +1,47 @@
+.one{
+    background-color: transparent;
+}
+.two{
+    background-color: aquamarine;
+}
+.three{
+    background-color: yellowgreen;
+}
+.four{
+    background-color: bisque;
+}
+.flipbook{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+}
+.page{
+    cursor:grab;
+}
+.page:active{
+    cursor:grabbing;
+}
+.arrow-div{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prev{
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease;
+    transform: rotateY(180deg);
+}
+.next{
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease;
+}
+.arrow-div:hover .prev{
+    transform: rotateY(180deg) rotateZ(5deg) translateX(20px) translateY(-10px);
+    
+}
+.arrow-div:hover .next{
+    transform:rotateZ(5deg) translateX(20px) translateY(-10px);
+}
