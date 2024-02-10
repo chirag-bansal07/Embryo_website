@@ -2,46 +2,111 @@
     background-color: transparent;
 }
 .two{
-    background-color: aquamarine;
+    background-image: url(./vid/bg-logo.webp);
+    
 }
 .three{
-    background-color: yellowgreen;
+    background-image: url(./vid/indexbg.jpg);
+    background-position: left center;
+    text-align: right;
 }
 .four{
-    background-color: bisque;
+    background-image: url(./vid/indexbg.jpg);
+    background-position: right center;
+    text-align: left;
+}
+@keyframes animation {
+    0%{
+        transform: translateX(-250px) rotateX(60deg) rotateZ(10deg);
+    }
+    30%{
+        transform: translateX(-150px) rotateX(60deg) rotateZ(10deg) translateY(-300px) ;
+    }
+    35%{
+        transform: translateX(-150px) rotateX(60deg) rotateZ(10deg) translateY(-300px) ;
+    }
+    100%{
+        transform: translateX(0px) translateY(0px) ;
+    }
 }
 .flipbook{
     display: flex;
     width: 95%;
     justify-content: space-between;
 }
+.book{
+    transform: translateX(-250px) rotateX(60deg) rotateZ(10deg);
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+.boxshadow{
+    box-shadow: 12px 12px 5px 8px rgba(255, 255, 255, 0.2);
+}
+.open{
+    transform: translateX(0);
+}
+.animating{
+    transition: all 2s;
+    animation: animation 1.7s linear;
+    transform: translateX(0);
+}
 .page{
     cursor:grab;
+}
+.right{
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+.left{
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
 }
 .page:active{
     cursor:grabbing;
 }
 .arrow-div{
-    width: 10%;
+    width: 7%;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .5s ease;
 }
 .prev{
     width: 100%;
     height: auto;
     transition: transform .5s ease;
-    transform: rotateY(180deg);
+    
 }
 .next{
     width: 100%;
     height: auto;
     transition: transform .5s ease;
+    transform: rotateY(180deg); 
 }
 .arrow-div:hover .prev{
-    transform: rotateY(180deg) rotateZ(5deg) translateX(20px) translateY(-10px);
+    transform:  rotateZ(-5deg) translateX(-20px) translateY(-10px);
     
 }
 .arrow-div:hover .next{
-    transform:rotateZ(5deg) translateX(20px) translateY(-10px);
+    transform:rotateZ(5deg) rotateY(180deg) translateX(-20px) translateY(-10px);
+}
+.hide{
+    opacity: 0;
+}
+.navigate{
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    bottom:1vw;
+    left: 45%;
+    transition: all .5s ease;
+}
+.logo-book{
+    margin-top: 50%;
+}
+.head{
+    font-size: 40px;
+    margin: 0;
+    color: whitesmoke;
 }

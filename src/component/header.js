@@ -3,11 +3,12 @@ import React from 'react'
 import logo from "./vid/logo.png"
 function Header(props) {
   return (
-    <div className='header'>
+    <div className={`header ${props.index?"bb":""}`}>
         <div className='cover'>
-            <img className={`logo ${props.page===0 ? "out" : "" }`} src={logo} alt='logo'></img>
-            {console.log(props.page)}
+            <img className={`logo ${!props.index ? "out" : "" }`} src={logo} alt='logo'></img>
+            
         </div>
+        <p className={`para ${props.index?"hide":""}`}>WELCOME TO BITSEMBRYO</p>
     </div>
   )
 }

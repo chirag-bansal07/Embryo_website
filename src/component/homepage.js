@@ -1,14 +1,27 @@
 import Header from "./header";
 import "./homepage.css";
-import vid from"./vid/video.mp4"
 import MyFlipBook from "./flip";
+import { useState, useRef } from "react";
 function Homepage() {
+  const videoRef = useRef(null);
+  const[logoin,setlogoin]=useState(false);
+  const[bganimation,setbganimation]=useState(false);
+  const datahandle=(data)=>{
+    setlogoin(data);
+  }
+  const animationhandle=(animate)=>{
+    setbganimation(animate);
+  }
   return (
     <>
     <div className="main-container">
-      <video src={vid} autoPlay loop muted className="background-video"></video>
-    <Header/>
-    <MyFlipBook/>
+      {<img
+       ref={videoRef}
+       src="https://howtotalktowhitekidsaboutracism.com/bg.707b1e7c.jpg"
+       alt=" "
+       className={`background-img ${bganimation?"bganimate":""}`}></img>}
+    <Header index={logoin}/>
+    <MyFlipBook data={datahandle} animate={animationhandle}/>
     </div>
     </>
   );
