@@ -5,6 +5,7 @@ import logo from "./vid/logo.png"
 
 const MyFlipBook = (props) => {
   const [open,setopen]=useState(false)
+  let flag=1;
   const [animation,setanimation]=useState(false)
   const navtoabout=()=>{
     flipBookRef.current.pageFlip().flipNext();
@@ -15,9 +16,32 @@ const MyFlipBook = (props) => {
       flipBookRef.current.pageFlip().flipNext()
     }, 900);
   }
+  const navtoLec=()=>{
+    flipBookRef.current.pageFlip().flipNext();
+    setTimeout(() => {
+      flipBookRef.current.pageFlip().flipNext()
+    }, 900);
+    setTimeout(() => {
+      flipBookRef.current.pageFlip().flipNext()
+    }, 900);
+  }
+  const navtoTeast=()=>{
+    flipBookRef.current.pageFlip().flipNext();
+    setTimeout(() => {
+      flipBookRef.current.pageFlip().flipNext()
+    }, 900);
+    setTimeout(() => {
+      flipBookRef.current.pageFlip().flipNext()
+    }, 900);
+    setTimeout(() => {
+      flipBookRef.current.pageFlip().flipNext()
+    }, 900);
+  }
+  
   const navigate=()=>{
     setanimation(true);
     props.animate(true);
+    flag=0;
     setTimeout(() => {
       flipBookRef.current.pageFlip().flipNext()
     }, 1500);
@@ -43,8 +67,8 @@ const handleFlip = (data) => {
         <img src="https://howtotalktowhitekidsaboutracism.com/arrow.3779d7ca.png" alt='prev' className='prev'></img>
       </div>
       <HTMLFlipBook 
-        className={`book ${open ?"open":"close"} ${animation?" animating":""}`} 
-         width={350} height={450} 
+        className={`book ${open && !flag ?"open":""} ${!open && !flag?"close":""} ${animation?" animating":""}`} 
+         width={400} height={450} 
          ref={flipBookRef} 
          onFlip={(data) => handleFlip(data)} 
          mobileScrollSupport={true} 
@@ -66,9 +90,12 @@ const handleFlip = (data) => {
         </div>
         <div className="page four right" data-density="hard">
           <h1 className='head'>EX</h1>
+          <button className='nav' onClick={navtoLec}>Lectures</button>
+          <button className='nav' onClick={navtoTeast}>Testimonials</button>
         </div>
-        <div className="page three left" data-density="hard">
-          Page 5
+        <div className="page about left" data-density="hard">
+          <h1 className='heading'>ABOUT</h1>
+          <p></p>
         </div>
         <div className="page two right" data-density="hard">
           Page 6

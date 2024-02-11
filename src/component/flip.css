@@ -5,6 +5,12 @@
     font-size: normal;
     font-weight: normal;
   }
+  @font-face {
+    font-family: "head";
+    src: url(./fonts/Rubik_Doodle_Shadow/RubikDoodleShadow-Regular.ttf)  format('truetype');
+    font-size: normal;
+    font-weight: normal;
+  }
 .one{
     background-color: transparent;
 }
@@ -22,6 +28,9 @@
     background-position: right center;
     text-align: left;
 }
+.about{
+    background-image: url(./vid/stock-photo-dark-grey-wooden-background-black.png);
+}
 @keyframes animation {
     0%{
         transform: translateX(-250px) rotateX(60deg) rotateZ(10deg);
@@ -36,21 +45,44 @@
         transform: translateX(0px) translateY(0px) ;
     }
 }
+@keyframes open {
+    0%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes close {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-200px);
+    }
+}
+
 .flipbook{
     display: flex;
     width: 95%;
     justify-content: space-between;
 }
 .book{
-    transform: translateX(-250px) rotateX(60deg) rotateZ(10deg);
+    transform: translateX(-200px) rotateX(60deg) rotateZ(10deg);
     transform-style: preserve-3d;
     transition: transform 1s ease;
 }
 .boxshadow{
     box-shadow: 12px 12px 5px 8px rgba(255, 255, 255, 0.2);
 }
+
+
 .open{
-    transform: translateX(0);
+    animation: open 2s;
+}
+.close{
+    animation: close 2s;
+    transform: translateX(-200px);
 }
 .animating{
     transition: all 2s;
@@ -122,4 +154,10 @@
     width: auto;
     height: auto;
     cursor: pointer;
+}
+.heading{
+    font-size: 70px;
+    margin: 1rem;
+    color: whitesmoke;
+    font-family: 'head', sans-serif;
 }

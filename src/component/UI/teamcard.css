@@ -1,0 +1,67 @@
+.main{
+    position: relative;
+    width: 22vw;
+    height: 22vw;
+    color: whitesmoke;
+    overflow: hidden;
+    margin: 1rem;
+    border-radius: 5%;
+    transition: all 1s ease;
+    border: 3px solid green;
+    box-shadow: 0px 0px 10px green;
+}
+.div{
+    text-wrap:wrap;
+
+}
+.img-cover{
+    position: relative;
+    width: 22vw;
+    height: 30vw;
+    background-color: blue;
+    z-index: 1;
+    transition: all 1s ease;
+}
+.img{
+    position: absolute;
+    width: 22vw;
+    left: 0;
+    z-index: 1;
+    transition: all 1s ease;
+}
+.bottom{
+    position: absolute;
+    background-color: grey;
+    width: 22vw;
+    top: 14vw;
+    z-index: 2;
+    overflow-y: hidden;
+    border-radius: 100% 0% 25% 25% / 25% 25% 0% 0%;
+    transition: all 1s ease;
+}
+.post{
+    font-size: 2rem;
+    margin: 3rem;
+}
+.mail{
+    position: absolute;
+    top: 0rem;
+    right: 2rem;
+    z-index: 0;
+    transition: all 1s ease;
+}
+.main:hover .img{
+    border-radius: 50%;
+    width: 10vw;
+}
+.main:hover .img-cover{
+    z-index: -1;
+}
+.main:hover .bottom{
+   top: 6.7vw;
+
+}
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+}
