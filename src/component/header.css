@@ -28,14 +28,17 @@
 .out{
     transform: translateX(-100%) !important;
 }
+
 .para{
     position: relative;
     margin: 0;
-    font-size: 2vw;
+    font-size: 4vw;
     color:whitesmoke;
     opacity: 10;
     transition: opacity 1s ease;
+    font-family: 'handwritten', sans-serif;
 }
+
 .hide{
     opacity: 0;
 }

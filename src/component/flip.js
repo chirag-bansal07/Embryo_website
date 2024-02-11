@@ -6,6 +6,15 @@ import logo from "./vid/logo.png"
 const MyFlipBook = (props) => {
   const [open,setopen]=useState(false)
   const [animation,setanimation]=useState(false)
+  const navtoabout=()=>{
+    flipBookRef.current.pageFlip().flipNext();
+  }
+  const navtoAIC=()=>{
+    flipBookRef.current.pageFlip().flipNext();
+    setTimeout(() => {
+      flipBookRef.current.pageFlip().flipNext()
+    }, 900);
+  }
   const navigate=()=>{
     setanimation(true);
     props.animate(true);
@@ -48,10 +57,12 @@ const handleFlip = (data) => {
         </div>  
         <div className="page three left" data-density="hard" >
           <h1 className='head'>IND</h1>
-          <p className='nav'>ABOUT</p>
-          <p className='nav'>TEAM</p>
-          <p className='nav'>AIC</p>
-          <p className='nav'></p>
+          <div>
+          <button className='nav' onClick={navtoabout}>ABOUT</button>
+          <button className='nav' onClick={navtoabout}>TEAM</button>
+          <button className='nav' onClick={navtoAIC}>AIC</button>
+          <button className='nav' onClick={navtoAIC}>pannel</button>
+          </div>
         </div>
         <div className="page four right" data-density="hard">
           <h1 className='head'>EX</h1>

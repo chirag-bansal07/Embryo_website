@@ -8,7 +8,7 @@ function Header(props) {
             <img className={`logo ${!props.index ? "out" : "" }`} src={logo} alt='logo'></img>
             
         </div>
-        <p className={`para ${props.index?"hide":""}`}>WELCOME TO BITSEMBRYO</p>
+        <p className={`para ${props.index?"hide":""}`}>WELCOME TO BITS-EMBRYO</p>
     </div>
   )
 }

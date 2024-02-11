@@ -1,3 +1,10 @@
+
+@font-face {
+    font-family: "handwritten";
+    src: url(./fonts/Protest_Revolution/ProtestRevolution-Regular.ttf)  format('truetype');
+    font-size: normal;
+    font-weight: normal;
+  }
 .one{
     background-color: transparent;
 }
@@ -106,7 +113,13 @@
     margin-top: 50%;
 }
 .head{
-    font-size: 40px;
+    font-size: 70px;
     margin: 0;
     color: whitesmoke;
+    font-family: 'handwritten', sans-serif;
+}
+.nav{
+    width: auto;
+    height: auto;
+    cursor: pointer;
 }
