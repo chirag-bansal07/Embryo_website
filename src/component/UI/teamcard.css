@@ -1,4 +1,4 @@
-.main{
+.cardmain{
     position: relative;
     width: 22vw;
     height: 22vw;
@@ -50,14 +50,14 @@
     z-index: 0;
     transition: all 1s ease;
 }
-.main:hover .img{
+.cardmain:hover .img{
     border-radius: 50%;
     width: 10vw;
 }
-.main:hover .img-cover{
+.cardmain:hover .img-cover{
     z-index: -1;
 }
-.main:hover .bottom{
+.cardmain:hover .bottom{
    top: 6.7vw;
 
 }

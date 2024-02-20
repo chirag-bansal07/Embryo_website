@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'button';
+    src: url(../fonts/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf);
+}
+.btn-lecs {
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    margin-bottom: 1rem;
+    margin-left: 6rem;
+    font-family: 'button',sans-serif;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50px;
+    background: rgb(47, 60, 69);
+    background: linear-gradient(27deg, rgb(45, 58, 67) 0%, rgb(52, 56, 58) 50%, rgb(57, 56, 56) 100%);
+    border: solid 2px #E5E4E2;
+   }
+   
+   .default-btn,.hover-btn {
+    background: rgb(47, 60, 69);
+    background: linear-gradient(27deg, rgb(45, 58, 67) 0%, rgb(52, 56, 58) 50%, rgb(57, 56, 56) 100%);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s ease;
+   }
+   
+   .hover-btn {
+    position: absolute;
+    inset: 0;
+    transform: translate(0%,100%);
+   }
+   
+   .default-btn span {
+    color: hsl(0, 0%, 100%);
+   }
+   
+   .hover-btn span {
+    color: #E5E4E2;
+    font-size: .9rem;
+   }
+   
+   button:hover .default-btn {
+    transform: translate(0%,-100%);
+   }
+   
+   button:hover .hover-btn {
+    transform: translate(0%,0%);
+   }

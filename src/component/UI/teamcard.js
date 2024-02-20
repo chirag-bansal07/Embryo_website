@@ -3,7 +3,7 @@ import logo from "../vid/logo.png"
 import "./teamcard.css"
 function Teamcard() {
   return (
-    <div className='main'>
+    <div className='cardmain'>
         <div className='img-cover'>
         <img src={logo} className='img'></img>
         </div>

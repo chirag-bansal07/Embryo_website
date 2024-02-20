@@ -1,0 +1,64 @@
+/* testimo_slider.css */
+@font-face {
+  font-family: 'hand';
+  src: url(../fonts/Protest_Revolution/ProtestRevolution-Regular.ttf);
+}
+.image-text-slider {
+  position: relative;
+  color: whitesmoke;
+  border: 3px silde green;
+  width: 70%;
+  margin-left: 3rem;
+  margin-top: 1.9rem;
+  font-size: 1.2rem;
+  font-family: 'hand',sans-serif;
+  padding: .5rem;
+  text-align: center;
+  justify-content: center;
+  text-shadow: #fff;
+  height: 60%;
+}
+
+.arrow.next {
+  position: absolute;
+  right: 20px; /* Adjust as needed */
+}
+
+
+
+.slick-dots {
+  position: absolute;
+  bottom: 0px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  font-size: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent; /* White color for dots */
+}
+.slick-dots button::before{
+  background-color: transparent;
+  border-radius: 50%;
+}
+.slick-dots .slick-active button {
+  background-color: whitesmoke; /* Black color for active dot */
+}
+.slick-track{
+  text-align: center;
+}

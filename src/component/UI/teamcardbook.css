@@ -1,0 +1,103 @@
+.cardmain{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: whitesmoke;
+    margin-left: 3.7rem;
+    overflow: hidden;
+    align-self: center;
+    border-radius: 5%;
+    transition: all 1s ease;
+    border: 3px solid #36454F;
+    box-shadow: 0px 0px 10px 5px #36454F;
+}
+.div{
+    text-wrap:wrap;
+
+}
+.img-cover{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+    transition: all 1s ease;
+}
+.img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    z-index: 1;
+    transition: all 1s ease;
+}
+@font-face {
+    font-family: "hand";
+    src: url(../fonts/Protest_Revolution/ProtestRevolution-Regular.ttf);
+}
+.bottom{
+    position: absolute;
+    font-family: "hand",sans-serif;
+    background-color: rgb(213, 210, 210);
+    color: black;
+    width: 100%;
+    top: 65%;
+    z-index: 2;
+    overflow-y: hidden;
+    border-radius: 100% 0% 25% 25% / 25% 25% 0% 0%;
+    transition: all 1s ease;
+}
+.post{
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+.mail{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.cardmain:hover .img{
+    border-radius: 50%;
+    width: 40%;
+    height: auto;
+    border: 3px solid #36454F;
+}
+.cardmain:hover .img-cover{
+    border-radius: 50%;
+    
+}
+
+.cardmain:hover .mail{
+    opacity: 1;
+    cursor: pointer;
+}
+.cardmain:hover .bottom{
+   top: 35%;
+
+}
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+}
+.socials a{
+    text-decoration: none;
+    color: black;
+}
+.insta a, .face a, .linked a{
+    transition: all .7s ease;
+}
+.insta:hover a{
+    color: #da4574;
+    cursor: pointer;
+}
+.face:hover a{
+    color: #395498;
+    cursor: pointer;
+}
+.linked:hover a{
+    color: #0077b0;
+    cursor: pointer;
+}
